@@ -55,8 +55,9 @@ subplot(2,2,1)
 plot(Znr,-Zni,'x')
 hold on
 plot(Znr2,-Zni2)
-xlabel('Partie réel de Z*')
+xlabel('Partie rÃ©el de Z*')
 ylabel('Partie imaginaire de Z*')
+legend('Cole-Cole','Inversion debye')
 
 subplot(2,2,2)
 Amp=sqrt(Znr.^2+Zni.^2);
@@ -66,9 +67,9 @@ semilogx(w,Amp,'x')
 hold on
 semilogx(w,Amp2)
 
-xlabel('Fréquence angulaire')
+xlabel('FrÃ©quence angulaire')
 ylabel('Amplitude de Z*')
-
+legend('Cole-Cole','Inversion debye')
 
 subplot(2,2,3)
 
@@ -79,24 +80,24 @@ loglog(w,-Phase,'x')
 hold on
 loglog(w,-Phase2)
 
-xlabel('Fréquence angulaire')
+xlabel('FrÃ©quence angulaire')
 ylabel('Phase')
-
+legend('Cole-Cole','Inversion debye')
 % figure(2)
 % 
 % subplot(2,2,1)
 % plot(Znr2,-Zni2)
-% xlabel('Partie réel de Z*')
+% xlabel('Partie rÃ©el de Z*')
 % ylabel('Partie imaginaire de Z*')
 % 
 % subplot(2,2,2)
 % semilogx(f,Amp2)
-% xlabel('Fréquence angulaire')
+% xlabel('FrÃ©quence angulaire')
 % ylabel('Amplitude de Z*')
 % 
 % subplot(2,2,3)
 % loglog(f,-Phase2)
 % 
-% xlabel('Fréquence angulaire')
+% xlabel('FrÃ©quence angulaire')
 % ylabel('Phase')
 
