@@ -1,4 +1,4 @@
-function [ Znr,Zni ] = ColeCole( w )
+function Z = ColeCole( w )
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 Zo=1000;
@@ -17,9 +17,7 @@ z2=m2.*(1-1./(1+(1i.*w.*t2).^c2));
 
 Z=Zo.*(1-z1-z2);
 
-Zn=(Zo-Z)./Zo; %normalisation de Z
-Znr=real(Zn);
-Zni=imag(Zn);
+
 
 end
 

@@ -6,21 +6,17 @@ close all
 f=logspace(-3,4,50);
 w=f.*(2*pi); % frequences angulaires associees
 
-% Parametres pour la modelisation ColeCole 
-% Modifier la fonction ColeCole pour prendre les arguments sous cette forme
+% Parametres pour la modelisation ColeCole
 Ro = 1000;
 m = [0.25, 0.75];
 c = [0.5, 1.0];
 tau = [10.^-2, 10.^-5];
 
-% Aller chercher Z (complexe) de la fonction ColeCole
-% Il serait bien que la fonction ColeCole prenne comme arguments:
-% w, Z0, m, c, tau
-Z = ColeCole(w);
-
-
 % Zo pour inversion Debye
 Zo=1000;
+
+
+
 % Liste des tau a utiliser
 % J'ai change les bornes pour aller de -6 a 4 (1 micro sec à 10000 sec)
 % floor(log10(min(1./w))-1) : prend l'inverse des frequences angulaires, va
@@ -30,7 +26,10 @@ Zo=1000;
 % De cette facon les tau dependent toujours des frequences
 t=logspace(floor(log10(min(1./w))-1), ceil(log10(max(1./w))+1), 1000).'; 
 
-
+% Aller chercher Z (complexe) de la fonction ColeCole
+% Il serait bien que la fonction ColeCole prenne comme arguments:
+% w, Z0, m, c, tau
+Z = ColeCole(w);
 
 % Normalisation de Z pour inversion Debye
 Zn=(Zo-Z)./Zo; 
