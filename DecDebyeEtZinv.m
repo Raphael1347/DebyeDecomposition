@@ -1,4 +1,4 @@
-function [ mk,t,Zinv,Zn,A] = DecDebyeEtZinv( Z,t,w,Zo )
+function [ mk,t,Zinv] = DecDebyeEtZinv( Z,t,w,Zo )
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 
