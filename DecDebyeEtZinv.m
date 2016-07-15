@@ -1,4 +1,4 @@
-function [ mk,t,Zinv] = DebyeDecomposition( Z,w,Zo )
+function [ mk,t,Zinv,Zn,A] = DecDebyeEtZinv( Z,t,w,Zo )
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -14,11 +14,11 @@ A1=(t*w).^2./(1+(t*w).^2);
 A2=(t*w)./(1+(t*w).^2);
 A=[A1 A2].';
 
-mk=lsqnonneg(A,Zn);
+mk=lsqnonneg(A,Zn.');
 
 % Reconstruction du data synthetique a partir des resultats (mk) de
 % l'inversion Debye
-Zinv=Zo*(1-mk*(1-1./(1+1i*t*w)))
+Zinv=Zo*(1-mk.'*(1-1./(1+1i*t*w)));
 
 
 
