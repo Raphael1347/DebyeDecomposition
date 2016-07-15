@@ -33,7 +33,7 @@ t=logspace(floor(log10(min(1./w))-1), ceil(log10(max(1./w))+1), 1000).';
 
 
 
-[ mk,t,Zinv] = DebyeDecomposition( Z,w,Zo )
+[ mk,t,Zinv] = DecDebyeEtZinv( Z,t,w,Zo )
 
 
 
