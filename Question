@@ -11,3 +11,11 @@ tau2 = 1e-5
 pas de bruit
 
 imagesc(c,m,RMSE)
+imagesc(c,m,TotalM)
+imagesc(c,m,MeanTau)
+imagesc(c,m,U)
+
+
+
+bar(tau,mk)
+
